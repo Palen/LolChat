@@ -1,0 +1,10 @@
+{
+  "name": "LoLchat",
+  "version": "0.0.1",
+  "description": "Chat made with socket.io",
+  "dependencies": {
+    "express": "^4.8.5",
+    "swig": "^1.4.2",
+    "socket.io": "^1.0.6"
+  }
+}
