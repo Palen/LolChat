@@ -1,4 +1,7 @@
 LolChat
 =======
 
-Chat made with Node.js and Express.io
+Chat made with Node.js + Express + Socket.io
+Make a clone and type:
+$ npm install
+$ node index.js
