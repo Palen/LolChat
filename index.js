@@ -11,7 +11,7 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 
 // set static files
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'static')));
 
 app.get('/', function (req, res){
 	res.render('index', {title: 'LoL Chat'})
@@ -20,7 +20,7 @@ app.get('/', function (req, res){
 io.on('connection', function (socket) {
 	console.log('New user connected');
 	socket.on('message', function (msg){
-		io.emit('alert.io', )
+		io.emit('message', msg);
 	});
 });
 
