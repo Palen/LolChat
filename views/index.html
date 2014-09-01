@@ -4,23 +4,12 @@
 <h1 class="title">{{title}}</h1>
 
 
-<ul id="messages"></ul>
+<ul id="messages"><li class='first_message'>{{first_message}}</li></ul>
 <form action="">
 	<input id="m" autocomplete="off" type="text"><button>LOL</button>
 </form>
 <script src="/socket.io/socket.io.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-<script>
-  var socket = io();
-  $('form').submit(function (){
-  	socket.emit('message', $('#m').val());
-  	$('#m').val('');
-
-  	return false;
-  })
-  socket.on('message', function(msg){
-    $('#messages').append($('<li>').text(msg));
-  });
-</script>
+<script src="js/lol_chat.js"></script>
 
 {% endblock  %}

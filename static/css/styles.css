@@ -45,6 +45,10 @@ form button{
 #messages li:nth-child(odd){
 	background: #eee;
 }
+.first_message{
+	font-style: italic;
+	font-weight: bold; 
+}
 .title{
 	text-align: center;
 }
