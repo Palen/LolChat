@@ -1,21 +1,17 @@
-  $( document ).ready(function() {
+  $( document ).ready(function () {
 	  var socket = io();
 
 	  $('form').submit(function (){
-	    if ($('#m').val().toLowerCase() == 'lol'){
-	        socket.emit('lol message');  
-	    }
-	    else{
-	  		socket.emit('message', $('#m').val());
-	  		secret_function();
-	    }
+	    
+  		socket.emit('message', $('#m').val());
+  		secret_function();
 	    $('#m').val('');
 	    return false;
 	  });
 	  socket.on('message', function (msg){
 	    $('#messages').append($('<li>').text(msg));
 	  });
-	  socket.on('lol message', function (to, sound){
+	  socket.on('play sound', function (sound){
 	    var audioSrc = 'data:audio/mp3;base64, ' + sound
 	    var audio = new Audio();
 	    audio.src = audioSrc;
