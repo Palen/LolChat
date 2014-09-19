@@ -18,6 +18,10 @@
 	    audio.load();
 	    audio.play();
 	  });
+	  socket.on('play gif', function (gif){
+	  	var imgSrc = "data:image/jpeg;base64," + gif
+	  	$('#messages').append($('<li><img src="' + imgSrc + '" /></li>'));
+	  });
 
 	var secret_function = function () {
 		if($('#messages').children().length == 10) {
